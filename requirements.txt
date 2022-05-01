@@ -1,0 +1,8 @@
+requests
+bs4
+re
+pandas
+os
+math
+sqlalchemy
+matplotlib.pyplot
