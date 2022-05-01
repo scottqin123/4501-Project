@@ -1,7 +1,7 @@
 
-    WITH "dists" AS (SELECT "distance" FROM "yellow_taxi" WHERE "pickup_datetime">"2012-12-31 23:59:59" AND "pickup_datetime"<"2014-01-01 00:00:00"
+WITH "dists" AS (SELECT "distance" FROM "yellow_taxi" WHERE DATE("pickup_datetime")>"2013-06-30" AND DATE("pickup_datetime")<"2013-08-01"
     UNION ALL
-    SELECT "distance" FROM "uber" WHERE "pickup_datetime">"2012-12-31 23:59:59" AND "pickup_datetime"<"2014-01-01 00:00:00")
+    SELECT "distance" FROM "uber" WHERE DATE("pickup_datetime")>"2013-06-30" AND DATE("pickup_datetime")<"2013-08-01")
     
     SELECT * FROM "dists"
     ORDER BY "distance" ASC
